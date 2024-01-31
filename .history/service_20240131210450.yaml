@@ -8,5 +8,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80          # 服务的暴露端口
-      targetPort: 8080  # 应用程序运行的端口
+      targetPort: 5000  # 应用程序运行的端口
   type: LoadBalancer

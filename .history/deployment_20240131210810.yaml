@@ -17,4 +17,4 @@ spec:
           image: 370591526820.dkr.ecr.ap-southeast-2.amazonaws.com/flask-server:1.1
   # 你的 Docker 镜像名称
           ports:
-            - containerPort: 8080  # 你的应用程序监听的
+            - containerPort: 5000  # 你的应用程序监听的
