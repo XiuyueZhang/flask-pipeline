@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-server
+spec:
+  replicas: 1  # 指定要运行的副本数量
+  selector:
+    matchLabels:
+      app: flask-server  # 应用程序的标签，用于与服务关联
+  template:
+    metadata:
+      labels:
+        app: flask-server  # 应用程序的标签，与选择器匹配
+    spec:
+      containers:
+        - name: flask-server
+          image: your-docker-image  # 你的 Docker 镜像名称
+          ports:
+            - containerPort: 5000  # 你的应用程序监听的

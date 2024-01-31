@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-server
+spec:
+  selector:
+    app: flask-server  # 用于匹配 Deployment 的标签
+  ports:
+    - protocol: TCP
+      port: 80          # 服务的暴露端口
+      targetPort: 5000  # 应用程序运行的端口
+  type: LoadBalancer
